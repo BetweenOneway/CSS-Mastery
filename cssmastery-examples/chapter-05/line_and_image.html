@@ -13,18 +13,30 @@
         .lineImage {
             position:relative;
             right:10px;
-            float:right;
+            float:left;
+        }
+        .inLine {
+            display: inline-block;
         }
         .text {
-            float:left;
             color:red;
+            float:left;
         }
         .clear {
             clear:both;
         }
+        .noticeIcon {
+            padding: 0px 0px 0px 30px;
+            background-image: url("img/pinwell.JPG");
+            background-repeat:no-repeat;
+            color:#FF0000;
+            margin-right:0.33em;
+        }
     </style>
 </head>
 <body>
+    <div class="noticeIcon">XXXX</div>
+
     <div class="total">
         <div class="text">
             <p>Activate flux capacitor</p>
@@ -32,14 +44,14 @@
         <img class="lineImage" src="img/pinwell.JPG" />
         
         <div class="clear"></div>
-    </div>
+    </div> 
+
     <div class="total">
         <img class="lineImage" src="img/pinwell.JPG" />
         <div class="text">
             <p>Activate flux capacitor</p>
         </div>
-        
-        
         <div class="clear"></div>
-    </div>    
+    </div>   
+ 
 </body>
