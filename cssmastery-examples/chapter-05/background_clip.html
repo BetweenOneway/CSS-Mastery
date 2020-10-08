@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>backgroud clip</title>
+        <style type="text/css">
+        .bg{
+            width: 100px;
+            height: 100px;
+            padding:50px;
+            border: 10px dashed #000000;
+            background: #ffff00 url("img/pinwell.JPG") no-repeat;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .bg_clip_border{
+            background-clip: border-box;
+            background-position: -10px -10px;
+        }
+        .bg_clip_content{
+            background-clip: content-box;
+            background-position: -10px -10px;
+        }
+        .bg_clip_padding{
+            background-clip: padding-box;
+            background-position: -10px -10px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="bg">
+            <div class="bg_clip_border"></div>
+        </div>
+        <div class="bg">
+            <div class="bg_clip_content"></div>
+        </div>
+        <div class="bg">
+            <div class="bg_clip_padding"></div>
+        </div>
+    </body>
+</html>
