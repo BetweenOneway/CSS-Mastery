@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"/>
         <title>box shadow</title>
+        <meta charset="utf-8"/>
         <style type="text/css">
-            .profile-background {
+            body {
+                margin:0;/*去除网页整体外围白框*/
+            }
+            .background-box {
                 width:100%;
                 height:600px;
                 background-image:url("img/big-cat.jpg");
-                background-repeat:no-repeat;
+                position:relative;
             }
-            .profile-box {}
+            .profile-box {
+                width:160px;
+                bottom:-60px;
+                left:5%;
+                position:absolute;
+                background-color: white;
+            }
+            .profile-box img {
+                display: block;
+                max-width:100%;
+            }
         </style>
     </head>
     <body>
-        <div class="profile-background">
+        <div class="background-box">
             <div class="profile-box">
-                <img src="img/cat.jpg">
+                <img src="img/profile.jpg" />
             </div>
         </div>
     </body>
