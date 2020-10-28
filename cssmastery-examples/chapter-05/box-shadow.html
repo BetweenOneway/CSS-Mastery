@@ -11,7 +11,9 @@
                 width:100%;
                 height:600px;
                 background-image:url("img/big-cat.jpg");
-                position:relative;/*因为profile-box的定位是绝对定位，所以如果不指定此处位置，profile-box会以浏览器窗口作为父元素计算位置*/
+                position:relative;
+                /*因为没有指定top等值，所以该定位实际无效，
+                只是因为profile-box的定位是绝对定位，所以如果不指定此处位置，profile-box会以浏览器窗口作为父元素计算位置*/
             }
             .profile-box {
                 width:160px;
