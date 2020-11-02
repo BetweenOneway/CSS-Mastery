@@ -10,21 +10,24 @@
             .background-box {
                 width:100%;
                 height:600px;
-                background-image:url("img/big-cat.jpg");
+                background-image:url("img/big-cat.jpg");/*背景图片*/
                 position:relative;
                 /*因为没有指定top等值，所以该定位实际无效，
-                只是因为profile-box的定位是绝对定位，所以如果不指定此处位置，profile-box会以浏览器窗口作为父元素计算位置*/
+                只是因为profile-box的定位是绝对定位，所以如果不指定此处位置，profile-box会以浏览器窗口作为父元素计算位置
+                因为默认的position是static*/
             }
             .profile-box {
                 width:160px;
                 bottom:-60px;
                 left:5%;
-                padding:.5em;/*使头像框有白色边框*/
-                position:absolute;
+                padding:.5em;/*16*0.5=8px 内边距使头像框有白色边框*/
+                position:absolute;/*因为要使头像框位于头部背景图的左下部分，使用绝对定位*/
                 background-color: white;
+                border-top-left-radius: 0.5em;/*头像框左上角 圆角边框*/
+                box-shadow: .25em .5em .5em .5em rgba(0,0,0,0.3);
             }
             .profile-box img {
-                display: block;/*加上后profile-box高度比不加少5px*/
+                display: block;/*加上后profile-box高度比不加少4px*/
                 max-width:100%;
             }
         </style>
@@ -32,6 +35,7 @@
     <body>
         <div class="background-box">
             <div class="profile-box">
+                <!--内容图片-->
                 <img src="img/profile.jpg" />
             </div>
         </div>
