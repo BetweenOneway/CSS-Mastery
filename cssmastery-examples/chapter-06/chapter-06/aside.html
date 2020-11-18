@@ -21,14 +21,17 @@
         .comment:after {
           position: absolute;
           content: " ";
-          display: block;
+          
           width: 0;
           height: 0;
           border: .5em solid #dcf0ff;
           border-bottom-color: transparent;
           border-right-color: transparent;
           position: absolute;
-          right: -1em;
+          right:-1em;
+          /*因为这个元素的显示是空内容结合border显示的，如果只指定.5em与不指定效果一样，
+          因为comment的padding就是.5em，而这个元素大小正好是1em，所以元素的右端会距离comment.5em因此无效
+          为了让其完整显示需要指定1em*/
           top: .5em;
         }
     </style>
