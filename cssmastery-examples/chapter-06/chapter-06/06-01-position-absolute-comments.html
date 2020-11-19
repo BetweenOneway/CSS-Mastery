@@ -23,8 +23,8 @@
       float: right;
       max-width: 17em;
       position: relative;
-      right: -8em;
-      margin-left: -7em;
+      right: -8em;/*使整个figure往右偏移，如果没有，figure会在body内部*/
+      margin-left: -7em;/*目的是去除空白 后续的文字是在figure不往右侧偏移的位置环绕的，所以会留出大片空白*/
     }
     figure img {
       width: 100%;
