@@ -4,11 +4,23 @@
         <meta charset="utf-8"/>
         <title>Author info</title>
         <style type="text/css">
-            .author-meta {}
-            .author-image {
-                float:left;
+        .author-meta:before {
+            content:"";
+            display:inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+        .author-meta {
+            height:10em;
+            border:1px solid #ccc;
+        }
+            .author-image,
+            .author-info {
+                display:inline-block;
+                vertical-align:middle;
             }
-            .author-name ,.authro-info {
+            .author-name ,
+            .authro-email {
                 display:block;
             }
         </style>
