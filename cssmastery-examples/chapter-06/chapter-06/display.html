@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>use display draw a table</title>
+    <style>
+        div{
+            border: 1px solid #008000;
+        }
+        
+        #container{
+            border: 1px solid #008000;
+            display: table;
+        }
+       
+        .tbody{
+            display: table-row-group;
+        }
+        .tbody div{
+            display: table-cell;  /*表格内容*/
+        }
+        #thead div{
+            display: table-cell;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+         <div class="tbody">
+             <div>张三</div>
+             <div>100</div>
+             <div>汉</div>
+             <div>广西桂平</div>
+         </div>
+         <div class="tbody">
+             <div>李四</div>
+             <div>200</div>
+             <div>壮</div>
+             <div>广西柳州</div>
+         </div>
+    </div>
+</body>
+</html>

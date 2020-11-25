@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>use display draw a table</title>
+    <style>
+        div{
+            border: 1px solid #008000;
+        }
+        #container div{
+            text-align: center;
+            vertical-align: middle;
+        }
+        #container{
+            border: 1px solid #008000;
+            display: table;
+        }
+        #title{
+            border: 2px solid green;
+            display: table-caption;        /*标题*/
+            font-size: 30px;
+        }
+        #thead div:last-child{
+            width: 200px;
+        }
+        .tbody{
+            display: table-row-group;
+        }
+        .tbody div{
+            width: 100px;
+            display: table-cell;  /*表格内容*/
+        }
+        #thead{
+            display: table-header-group;    /*表格的头部*/
+        }
+        #thead div{
+            display: table-cell;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="title">员工统计表</div>
+        <div id="thead">
+            <div>姓名</div>
+            <div>年龄</div>
+            <div>民族</div>
+            <div>籍贯</div>
+         </div>
+         <div class="tbody">
+             <div>张三</div>
+             <div>100</div>
+             <div>汉</div>
+             <div>广西桂平</div>
+         </div>
+         <div class="tbody">
+             <div>李四</div>
+             <div>200</div>
+             <div>壮</div>
+             <div>广西柳州</div>
+         </div>
+    </div>
+</body>
+</html>

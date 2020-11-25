@@ -1,5 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body></body>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Nav</title>
+        <style>
+            .navbar ul {
+            font-family: 'Avenir Next', Avenir, Corbel, 'Franklin Gothic', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+            list-style: none;/*列表项无属性 去除前面的点*/
+            padding: 0;
+            background-color: #486a8e;
+            width:100%;
+            display:table;
+            table-layout: fixed;
+            }
+
+            .navbar li {
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: center;
+            width: 25%;
+            -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            background-color: #12459e;
+            outline: 1px solid #fff;
+            }
+            
+            .navbar li a {
+            display: block;
+            text-decoration: none;
+            line-height: 1.75em;
+            padding: 1em;
+            color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">HOME</a></li>
+                <li><a href="">HOME</a></li>
+                <li><a href="">HOME</a></li>
+            </ul>
+        </nav>   
+    </body>
 </html>
