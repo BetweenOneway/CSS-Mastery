@@ -5,40 +5,58 @@
     <meta charset="utf-8">
     <title>use display draw a table</title>
     <style>
-        div{
-            border: 1px solid #008000;
+        .table {
+            display: table;/*有padding和margin*/
         }
-        
-        #container{
-            border: 1px solid #008000;
-            display: table;
+        .head_line {
+            display:table-header-group;
         }
-       
-        .tbody{
-            display: table-row-group;
+        .head_line div {
+            display:table-cell;
+            border:1px solid red;
         }
-        .tbody div{
-            display: table-cell;  /*表格内容*/
+        .row_group {
+            display:table-row-group;
         }
-        #thead div{
-            display: table-cell;
+        .table_row {
+            display:table-row;/*没有padding和margin*/
+        }
+        .table_row div {
+            display: table-cell;/*没有margin*/
+            border: 1px solid red;
+        }
+        .caption {
+            display:table-caption;
+            text-align: center;
+            border:1px solid red;
         }
     </style>
 </head>
 <body>
-    <div id="container">
-         <div class="tbody">
-             <div>张三</div>
-             <div>100</div>
-             <div>汉</div>
-             <div>广西桂平</div>
-         </div>
-         <div class="tbody">
-             <div>李四</div>
-             <div>200</div>
-             <div>壮</div>
-             <div>广西柳州</div>
-         </div>
+    <div class="table">
+        <div class="caption">员工统计表</div>
+        <div class="head_line">
+            <div>姓名</div>
+            <div>年龄</div>
+            <div>名族</div>
+            <div>籍贯</div>
+        </div>
+        <div class="row_group">
+            <div class="table_row">
+                <div>张三</div>
+                <div>100</div>
+                <div>汉</div>
+                <div>广西桂平</div>
+            </div>
+        </div>
+        <div class="row_group">
+            <div class="table_row">
+                <div>李四</div>
+                <div>200</div>
+                <div>壮</div>
+                <div>广西柳州</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

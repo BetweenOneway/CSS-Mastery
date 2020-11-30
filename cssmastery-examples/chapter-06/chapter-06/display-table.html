@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>use display draw a table</title>
+    <title>display table</title>
     <style>
         div{
             border: 1px solid #008000;
@@ -21,9 +21,6 @@
             display: table-caption;        /*标题*/
             font-size: 30px;
         }
-        #thead div:last-child{
-            width: 200px;
-        }
         .tbody{
             display: table-row-group;
         }
@@ -32,7 +29,7 @@
             display: table-cell;  /*表格内容*/
         }
         #thead{
-            display: table-header-group;    /*表格的头部*/
+            display: table-header-group;    /*表格的头部 不加字会竖排*/
         }
         #thead div{
             display: table-cell;
