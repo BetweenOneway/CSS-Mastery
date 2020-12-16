@@ -7,17 +7,18 @@
             body {
                 margin:0;
             }
+            /*定调整个页面的大小*/
             .wrapper {
                 width:95%;
                 margin:0 auto;
-                max-width: 75em;
+                max-width: 76em;
             }
             .headline {
                 background-color: #8E3339;
             }
             .headline h1 {
                 margin:0;/*h1默认会有0.67em的上下margin*/
-                padding:0.5em;/*撑开上下左右空间*/
+                padding:0.5em 0;/*撑开上下空间*/
                 color: #fff;
                 text-shadow: -.1em .1em 0 rgba(0,0,0,0.3);
             }
@@ -32,19 +33,21 @@
                 font-family: 'Avenir Next', Avenir, Corbel, 'Franklin Gothic', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
                 background-color: #752A2F;
                 margin:0;/*去除ul引入的上下margin*/
-                
+                padding:0;/*去除ul引入的左侧padding*/
             }
             .navbar li {
                 text-transform:uppercase;/*大写*/
                 box-sizing:border-box;
                 text-align: center;/*居中对齐*/
                 flex: 1 1 auto;
+                border-left:1px solid #8E3339;/*每一项之间增加分隔线*/
             }
             .navbar li a {
-                
-                margin:1em;
+                display:block;/*重要，本身是一个inline-level盒子，所以padding不会被计算在高度内，所以需要改变*/
                 line-height: 1.75em;
                 padding:1em 2em;
+                color:#fff;
+                text-decoration: none;/*去除<a>引入的下划线*/
             }
         </style>
     </head>
@@ -54,15 +57,25 @@
                 <h1>Important News</h1>
             </div>
         </header>
+
         <nav class="navbar">
             <div class="wrapper">
                 <ul class="navlist">
                     <li><a href="#">HOME</a></li>
-                    <li><a href="#">WROLD</a></li>
+                    <li><a href="#">WORLD</a></li>
                     <li><a href="#">LOCAL</a></li>
-                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SPORTS</a></li>
                 </ul>
             </div>
         </nav>
+
+        <main>
+            <div class="subcategory">
+                <div class="row"></div>
+            </div>
+            <div class="subcategory">
+                <div class="row"></div>
+            </div>
+        </main>
     </body>
 </html>
