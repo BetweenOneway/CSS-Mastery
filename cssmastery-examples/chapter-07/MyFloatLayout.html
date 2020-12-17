@@ -6,6 +6,8 @@
         <style type="text/css">
             body {
                 margin:0;
+                line-height: 1.375;
+                font-family: Georgia, Times New Roman, Times, serif;
             }
             /*定调整个页面的大小*/
             .wrapper {
@@ -21,6 +23,7 @@
                 padding:0.5em 0;/*撑开上下空间*/
                 color: #fff;
                 text-shadow: -.1em .1em 0 rgba(0,0,0,0.3);
+                font-family: Avenir Next, Avenir, Franklin Gothic, Trebuchet MS, Arial, sans-serif;
             }
             
             .navbar {
@@ -49,6 +52,12 @@
                 color:#fff;
                 text-decoration: none;/*去除<a>引入的下划线*/
             }
+
+            .row:after {
+                content:" ";
+                display:block;
+                clear:both;
+            }
         </style>
     </head>
     <body>
@@ -70,12 +79,15 @@
         </nav>
 
         <main>
-            <div class="subcategory">
+            <section class="subcategory">
+                <div class="row">
+                    <div></div>
+                    <div></div>
+                </div>
+            </section>
+            <section class="subcategory">
                 <div class="row"></div>
-            </div>
-            <div class="subcategory">
-                <div class="row"></div>
-            </div>
+            </section>
         </main>
     </body>
 </html>

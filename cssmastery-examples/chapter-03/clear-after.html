@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clear:After</title>
+
+  <style type="text/css">
+    .media-block {
+      background-color: gray;
+      border: solid 1px black;
+    }
+    .media-fig {
+      float: left;
+      margin-right:5%;
+    }
+    .media-body {
+        float:right;
+        width:65%;
+    }
+    .media-block:after {
+        content:" ";/*如果没有这个，伪类不会生成*/
+        display:block;/*clear要起作用必须要block*/
+        clear:both;
+    }
+  </style>
+</head>
+<body>
+  <div class="media-block">
+    <img class="media-fig" src="img/pic.png" alt="The pic" />
+    <div class="media-body">
+      <h3>Title of this</h3>
+      <p>Brief description of this</p>
+    </div>
+  </div>
+</body>
+</html>
