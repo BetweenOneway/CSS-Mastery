@@ -64,6 +64,13 @@
                 min-height: 100px;
                 outline:1px solid red;
             }
+            /*同优先级的样式，后面覆盖前面的，要注意定义顺序*/
+            .row-quartet > * {
+                width: 25%;
+            }
+            .row-trio > * {
+                width: 33.3333%;
+            }
             .subcategory-header {
                 width:20%;
             }
@@ -73,12 +80,7 @@
             .subcategory-featured {
                 width:50%;
             }
-            .row-quartet > * {
-                width: 25%;
-            }
-            .row-trio > * {
-                width: 33.3333%;
-            }
+            
         </style>
     </head>
     <body>
