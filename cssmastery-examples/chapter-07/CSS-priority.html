@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS selector priority test</title>
+        <style type="text/css">
+        
+        .parent {
+            border:1px solid red;
+            width:10em;
+            height:10em;
+        }
+        .parent > * {
+            border:1px solid black;
+        }
+        .child {
+            border:1px solid greenyellow;
+            width:5em;
+            height:5em;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </body>
+</html>
