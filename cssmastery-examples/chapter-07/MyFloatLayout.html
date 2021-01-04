@@ -71,6 +71,10 @@
             .row-trio > * {
                 width: 33.3333%;
             }
+            .subcategory {
+                margin-top: 1.5em;/*上方增加点空白*/
+                border-bottom: 1px solid #8e3339;/*两个section的分割线*/
+            }
             .subcategory-header {
                 width:20%;
             }
@@ -79,6 +83,16 @@
             }
             .subcategory-featured {
                 width:50%;
+            }
+            .story {
+                padding: .6875em;
+                background-color: #eee;
+            }
+            .story + .story {
+                margin-top: 1.375em;
+            }
+            .story img {
+                width: 100%;/*图片超出框 只能占据100%，不能超出边界*/
             }
             
         </style>
@@ -102,15 +116,19 @@
         </nav>
         <!--先行后列-->
         <main class="wrapper">
-            <section>
+            <section class="subcategory">
                 <div class="row">
                     <div class="col subcategory-header">
-                        <h2>Sub-section 1</h2>
+                        <h2>Lorem ipsum</h2>
                     </div>
                     <div class="col subcategory-content">
                         <div class="row row-quartet">
                             <div class="col subcategory-featured">
-                                <h3>Story1</h3>
+                                <article class="story">
+                                    <img src="http://placehold.it/600x300" alt="Dummy image">
+                                    <h3><a href="#">Cras suscipit nec leo id.</a></h3>
+                                    <p>Autem repudiandae aliquid tempora quos reprehenderit architecto, sequi repellat.</p>
+                                </article>
                             </div>
                             <div class="col">
                                 <h3>Story2</h3>
@@ -145,7 +163,7 @@
                     </div>
                     -->
                     <div class="col subcategory-header">
-                        <h2>Subsection2</h2><!--h2对破折号和空格有特殊处理-->
+                        <h2>Sub-section 2</h2><!--当空间不够的时候，h2对破折号和空格有特殊处理-->
                     </div>    
                     
                     <div class="col subcategory-content">
