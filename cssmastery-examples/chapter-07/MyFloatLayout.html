@@ -52,6 +52,9 @@
                 color:#fff;
                 text-decoration: none;/*去除<a>引入的下划线*/
             }
+            .navbar li:first-child {
+                border-left: 0;/*去除nav bar第一个元素左侧的分割线 navbar li引入*/
+            }
 
             .row:after {
                 content:" ";
@@ -62,7 +65,6 @@
                 float:left;
                 box-sizing:border-box;
                 min-height: 100px;
-                outline:1px solid red;
             }
             /*同优先级的样式，后面覆盖前面的，要注意定义顺序*/
             .row-quartet > * {
@@ -131,24 +133,44 @@
                                 </article>
                             </div>
                             <div class="col">
-                                <h3>Story2</h3>
+                                <article class="story">
+                                    <img src="http://placehold.it/600x300" alt="Dummy image">
+                                    <h3><a href="#">Perferendis, ipsam!</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
                             </div>
                             <div class="col">
-                                <h3>Story3</h3>
+                                <article class="story">
+                                    <img src="http://placehold.it/600x300" alt="Dummy image">
+                                    <h3><a href="#">Curabitur mattis purus nec velit.</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
                             </div>
                         </div>
                         <div class="row row-quartet">
                             <div class="col">
-                                <h3>Story4</h3>
+                                <article class="story">
+                                    <h3><a href="#">Perferendis, ipsam!</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
                             </div>
                             <div class="col">
-                                <h3>Story5</h3>
+                                <article class="story">
+                                    <h3><a href="#">Aliquam mattis eros id posuere.</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
                             </div>
                             <div class="col">
-                                <h3>Story6</h3>
+                                <article class="story">
+                                    <h3><a href="#">Proin leo felis, semper nec</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
                             </div>
                             <div class="col">
-                                <h3>Story7</h3>
+                                <article class="story">
+                                    <h3><a href="#">Aliquam vitae risus tortor. Sed!</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
                             </div>
                         </div>
                     </div>
@@ -163,19 +185,36 @@
                     </div>
                     -->
                     <div class="col subcategory-header">
-                        <h2>Sub-section 2</h2><!--当空间不够的时候，h2对破折号和空格有特殊处理-->
+                        <!--<h2>Sub-section 2</h2>--><!--当空间不够的时候，h2对破折号和空格有特殊处理-->
+                        <h2>Dolor sit amet</h2>
                     </div>    
                     
                     <div class="col subcategory-content">
                         <div class="row row-trio">
                             <div class="col">
-                                <h3>Story8</h3>
+                                <article class="story">
+                                    <img src="http://placehold.it/600x300" alt="Dummy image">
+                                    <h3><a href="#">Ut sit amet mi massa</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
                             </div>
                             <div class="col">
-                                <h3>Story9</h3>
+                                <!--两个article上下排列-->
+                                <article class="story">
+                                    <h3><a href="#">Nunc mollis sit amet nunc</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                                <article class="story">
+                                    <h3><a href="#">Duis sed ante enim. Cras</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
                             </div>
                             <div class="col">
-                                <h3>Story10</h3>
+                                <article class="story">
+                                    <img src="http://placehold.it/600x300" alt="Dummy image">
+                                    <h3><a href="#">Animi, explicabo, ipsum</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
                             </div>
                         </div>
                     </div>
