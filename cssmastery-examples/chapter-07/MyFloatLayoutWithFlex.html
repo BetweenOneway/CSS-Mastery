@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>My float layout web</title>
+        <style type="text/css">
+            body {
+                margin:0;
+                line-height: 1.375;
+                font-family: Georgia, Times New Roman, Times, serif;
+            }
+            /*定调整个页面的大小*/
+            .wrapper {
+                width:95%;
+                margin:0 auto;
+                max-width: 76em;
+            }
+            .headline {
+                background-color: #8E3339;
+            }
+            .headline h1 {
+                margin:0;/*h1默认会有0.67em的上下margin*/
+                padding:0.5em 0;/*撑开上下空间*/
+                color: #fff;
+                text-shadow: -.1em .1em 0 rgba(0,0,0,0.3);
+                font-family: Avenir Next, Avenir, Franklin Gothic, Trebuchet MS, Arial, sans-serif;
+            }
+            
+            .navbar {
+                background-color: #5E2126;
+                margin-bottom: 1.375em;/*与下方内容区留出间隔*/
+            }
+            .navbar .navlist {
+                list-style: none;/*去除列表样式*/
+                display:flex;/*列表竖排变横排*/
+                font-family: 'Avenir Next', Avenir, Corbel, 'Franklin Gothic', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+                background-color: #752A2F;
+                margin:0;/*去除ul引入的上下margin*/
+                padding:0;/*去除ul引入的左侧padding*/
+            }
+            .navbar li {
+                text-transform:uppercase;/*大写*/
+                box-sizing:border-box;
+                text-align: center;/*居中对齐*/
+                flex: 1 1 auto;
+                border-left:1px solid #8E3339;/*每一项之间增加分隔线*/
+            }
+            .navbar li a {
+                display:block;/*重要，本身是一个inline-level盒子，所以padding不会被计算在高度内，所以需要改变*/
+                line-height: 1.75em;
+                padding:1em 2em;
+                color:#fff;
+                text-decoration: none;/*去除<a>引入的下划线*/
+            }
+            .navbar li:first-child {
+                border-left: 0;/*去除nav bar第一个元素左侧的分割线 navbar li引入*/
+            }
+            .row {
+                margin:0 -0.9%;
+            }
+            .row:after {
+                content:" ";
+                display:block;
+                clear:both;
+            }
+            .col {
+                float:left;
+                box-sizing:border-box;
+                min-height: 100px;
+                margin:0 0.9% 1.375em;
+            }
+            /*同优先级的样式，后面覆盖前面的，要注意定义顺序*/
+            .row-quartet > * {
+                width: 23.2%;/*25%-1.8%*/
+            }
+            .row-trio > * {
+                width: 31.5333%;/*33.3333%;-1.8%*/
+            }
+            .subcategory {
+                margin-top: 1.5em;/*上方增加点空白*/
+                border-bottom: 1px solid #8e3339;/*两个section的分割线*/
+            }
+            /*这些减掉的1.8%是用来制造空距间隔的*/
+            .subcategory-header {
+                width:18.2%;/*20-1.8*/
+            }
+            .subcategory-content {
+                width: 78.2%;/*80-1.8*/
+            }
+            .subcategory-featured {
+                width:48.2%;/*50-1.8*/
+            }
+            .story {
+                padding: .6875em;
+                background-color: #eee;
+            }
+            .story + .story {
+                margin-top: 1.375em;
+            }
+            .story img {
+                width: 100%;/*图片超出框 只能占据100%，不能超出边界*/
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header class="headline">
+            <div class="wrapper">
+                <h1>Important News</h1>
+            </div>
+        </header>
+
+        <nav class="navbar">
+            <div class="wrapper">
+                <ul class="navlist">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">WORLD</a></li>
+                    <li><a href="#">LOCAL</a></li>
+                    <li><a href="#">SPORTS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--先行后列-->
+        <main class="wrapper">
+            <section class="subcategory">
+                <div class="row">
+                    <div class="col subcategory-header">
+                        <h2>Lorem ipsum</h2>
+                    </div>
+                    <div class="col subcategory-content">
+                        <div class="row row-quartet">
+                            <div class="col subcategory-featured">
+                                <article class="story">
+                                    <img src="http://placehold.it/600x300" alt="Dummy image">
+                                    <h3><a href="#">Cras suscipit nec leo id.</a></h3>
+                                    <p>Autem repudiandae aliquid tempora quos reprehenderit architecto, sequi repellat.</p>
+                                </article>
+                            </div>
+                            <div class="col">
+                                <article class="story">
+                                    <img src="http://placehold.it/600x300" alt="Dummy image">
+                                    <h3><a href="#">Perferendis, ipsam!</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                            </div>
+                            <div class="col">
+                                <article class="story">
+                                    <img src="http://placehold.it/600x300" alt="Dummy image">
+                                    <h3><a href="#">Curabitur mattis purus nec velit.</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row row-quartet">
+                            <div class="col">
+                                <article class="story">
+                                    <h3><a href="#">Perferendis, ipsam!</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                            </div>
+                            <div class="col">
+                                <article class="story">
+                                    <h3><a href="#">Aliquam mattis eros id posuere.</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                            </div>
+                            <div class="col">
+                                <article class="story">
+                                    <h3><a href="#">Proin leo felis, semper nec</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                            </div>
+                            <div class="col">
+                                <article class="story">
+                                    <h3><a href="#">Aliquam vitae risus tortor. Sed!</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="subcategory">
+                <div class="row">
+                    <!--<div class="col">
+                        <div class="subcategory-header">像这样分开写，20%占的就是这一列格的20%，而不是row的20%
+                            <h2>Subsection2</h2>
+                        </div>    
+                    </div>
+                    -->
+                    <div class="col subcategory-header">
+                        <!--<h2>Sub-section 2</h2>--><!--当空间不够的时候，h2对破折号和空格有特殊处理-->
+                        <h2>Dolor sit amet</h2>
+                    </div>    
+                    
+                    <div class="col subcategory-content">
+                        <div class="row row-trio">
+                            <div class="col">
+                                <article class="story">
+                                    <img src="http://placehold.it/600x300" alt="Dummy image">
+                                    <h3><a href="#">Ut sit amet mi massa</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                            </div>
+                            <div class="col">
+                                <!--两个article上下排列-->
+                                <article class="story">
+                                    <h3><a href="#">Nunc mollis sit amet nunc</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                                <article class="story">
+                                    <h3><a href="#">Duis sed ante enim. Cras</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                            </div>
+                            <div class="col">
+                                <article class="story">
+                                    <img src="http://placehold.it/600x300" alt="Dummy image">
+                                    <h3><a href="#">Animi, explicabo, ipsum</a></h3>
+                                    <p>Neque magnam vero obcaecati facere nobis sint dolore accusamus vitae consequuntur ad necessitatibus, laborum molestiae.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
