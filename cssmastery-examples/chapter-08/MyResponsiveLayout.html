@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="charset" content="utf-8"/>
+    <title>My responsive layout</title>
+    <style type="text/css">
+        body {
+            margin:0;
+        }
+        .wrapper {
+            width:95%;
+            margin:0 auto;
+        }
+        .navbar {
+            background-color:#5E2126;
+        }
+        .navbar .navlist {
+            list-style: none;
+            display:flex;
+            margin:0;
+            padding:0;
+        }
+        .navlist li {
+            text-transform: uppercase;
+            text-align: center;
+            flex:1 auto;
+        }
+        .navlist li a {
+            text-decoration:none;
+            display:block;
+            color:#fff;
+            line-height: 1.75em;/*指的是内容区的高度 深入了解下该属性*/
+            margin:1em 2em;/*padding和margin都可以撑开上下左右空间 由内容撑开空间*/
+        }
+    </style>
+</head>
+<body>
+    <header class="head-line">
+        <div class="wrapper">
+            <h1>Important News</h1>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="wrapper">
+            <ul class="navlist">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">WORLD</a></li>
+                <li><a href="#">LOCAL</a></li>
+                <li><a href="#">SPORTS</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="wrapper"></main>
+</body>
