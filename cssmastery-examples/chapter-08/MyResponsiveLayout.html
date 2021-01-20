@@ -6,10 +6,22 @@
     <style type="text/css">
         body {
             margin:0;
+            line-height: 1.375;
         }
         .wrapper {
             width:95%;
             margin:0 auto;
+            max-width: 76em;
+        }
+        .head-line {
+            background-color: #8E3339;
+        }
+        .head-line h1 {
+            margin:0;/*h1默认会有0.67em的上下margin*/
+            padding:0.5em 0;/*撑开上下空间*/
+            color: #fff;
+            text-shadow: -.1em .1em 0 rgba(0,0,0,0.3);
+            font-family: Avenir Next, Avenir, Franklin Gothic, Trebuchet MS, Arial, sans-serif;
         }
         .navbar {
             background-color:#5E2126;
@@ -30,7 +42,7 @@
             display:block;
             color:#fff;
             line-height: 1.75em;/*指的是内容区的高度 深入了解下该属性*/
-            margin:1em 2em;/*padding和margin都可以撑开上下左右空间 由内容撑开空间*/
+            padding:1em 2em;/*padding和margin都可以撑开上下左右空间 由内容撑开空间*/
         }
     </style>
 </head>
