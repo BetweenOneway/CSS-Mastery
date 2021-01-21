@@ -31,11 +31,13 @@
             display:flex;
             margin:0;
             padding:0;
+            background-color: #752A2F;
         }
         .navlist li {
             text-transform: uppercase;
             text-align: center;
             flex:1 auto;
+            border-left:1px solid #8E3339;/*每一项之间增加分隔线*/
         }
         .navlist li a {
             text-decoration:none;
@@ -43,6 +45,9 @@
             color:#fff;
             line-height: 1.75em;/*指的是内容区的高度 深入了解下该属性*/
             padding:1em 2em;/*padding和margin都可以撑开上下左右空间 由内容撑开空间*/
+        }
+        .navbar li:first-child {
+            border-left: 0;/*去除nav bar第一个元素左侧的分割线 navbar li引入*/
         }
     </style>
 </head>
@@ -62,5 +67,15 @@
             </ul>
         </div>
     </nav>
-    <main class="wrapper"></main>
+    <main class="wrapper">
+        <section class="subcategory">
+            <div class="row">
+                <div class="col subcategory-header"></div>
+                <div class="col subcategory-content">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
